@@ -4,6 +4,9 @@ import pyttsx3
 
 listener = sr.Recognizer()
 engine = pyttsx3.init()
+voices = engine.getProperty("voices")
+engine.setProperty('voice', voices[1].id)
+
 engine.say("I am your bot")
 engine.say("how can i help you")
 engine.runAndWait()
